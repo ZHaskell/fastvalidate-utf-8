@@ -1,4 +1,6 @@
 #ifdef __AVX512F__
+#include <stdbool.h>   // c99 bool
+#include <stddef.h>    // size_t
 #include <x86intrin.h>
 // The function returns true (1) if all chars passed in src are
 // 7-bit values (0x00..0x7F). Otherwise, it returns false (0).
