@@ -1,3 +1,6 @@
+#ifndef SIMDASCIICHECK_AXV512_H
+#define SIMDASCIICHECK_AXV512_H
+
 #ifdef __AVX512F__
 #include <stdbool.h>   // c99 bool
 #include <stddef.h>    // size_t
@@ -21,4 +24,6 @@ static bool validate_ascii_fast_avx512(const char *src, size_t len) {
 
   return !(reduced & 0x80808080);
 }
+#endif
+
 #endif
